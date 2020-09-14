@@ -1,0 +1,12 @@
+public class WiFiDiagnosisTest {
+  
+public static void main(String[] args) {
+  
+// print the header
+System.out.println("If you're having problems with your internet a diagnosis might help.\n");
+  
+// call the WiFiDiagnosis function
+WiFiDiagnosis diagnosis = new WiFiDiagnosis();
+diagnosis.troubleShootWiFi();
+}
+}
