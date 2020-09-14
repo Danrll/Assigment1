@@ -1,0 +1,78 @@
+import java.util.Scanner;
+
+public class WiFiDiagnosis {
+  
+public void troubleShootWiFi()
+{
+Scanner sc = new Scanner(System.in);
+  
+// 1st
+System.out.println("First, restart computer.");
+System.out.print("Is the internet working? (yes or no): ");
+String choice = sc.nextLine().trim();
+while(!choice.equalsIgnoreCase("yes") && !choice.equalsIgnoreCase("no"))
+{
+System.out.println("Please enter yes or no!\n");
+System.out.print("Can you connect to the internet? (yes or no): ");
+choice = sc.nextLine().trim();
+}
+if(choice.equalsIgnoreCase("yes"))
+{
+System.out.println("Restarting seemed to work :)");
+return;
+}
+  
+// 2nd 
+System.out.println("2nd: Now let's try restarting your router");
+System.out.print("Does the internet work now? (yes or no): ");
+choice = sc.nextLine().trim();
+while(!choice.equalsIgnoreCase("yes") && !choice.equalsIgnoreCase("no"))
+{
+System.out.println("Please enter yes or no!\n");
+System.out.print("Does the internet work now? (yes or no): ");
+choice = sc.nextLine().trim();
+}
+if(choice.equalsIgnoreCase("yes"))
+{
+System.out.println("Restarting your router seems to have done the trick.");
+return;
+}
+  
+// 3rd 
+System.out.println("3rd: now make sure your routers cables are plugged in properly and that it is receiving power.");
+System.out.print("Is the internet working now? (yes or no): ");
+choice = sc.nextLine().trim();
+while(!choice.equalsIgnoreCase("yes") && !choice.equalsIgnoreCase("no"))
+{
+System.out.println("Please enter yes or no!\n");
+System.out.print("Is the internet working now? (yes or no): ");
+choice = sc.nextLine().trim();
+}
+if(choice.equalsIgnoreCase("yes"))
+{
+System.out.println("Seems like the cables were the problem and it's working now.");
+return;
+}
+  
+// 4th 
+System.out.println("4th: Let's try moving the computer next to the router or as close as possible to it.");
+System.out.print("Is the internet working finally? (yes or no): ");
+choice = sc.nextLine().trim();
+while(!choice.equalsIgnoreCase("yes") && !choice.equalsIgnoreCase("no"))
+{
+System.out.println("Please enter yes or no!\n");
+System.out.print("Is the internet working finally? (yes or no): ");
+choice = sc.nextLine().trim();
+}
+if(choice.equalsIgnoreCase("yes"))
+{
+System.out.println("moving the computer solved the issue.");
+return;
+}
+  
+// 5th step
+System.out.println("5th: contact your ISP for help\n"
++ "Make sure your ISP is connected to the router.");
+}
+}
+
